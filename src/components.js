@@ -23,7 +23,6 @@ const TableCell = {
   text: ''
 }
 
-
 export const Header = {
   extend: Flex,
   props: {
@@ -70,14 +69,14 @@ export const GridComponent = {
   children: [
     {
       extend: TableBody,
-      children: Array.from({ length: 8 }, () => ({
+      children: Array.from({ length: process.env.ROWS }, () => ({
         extend: TableRow,
         
         props: (element, state) => ({
           border: '1px solid black' 
         }),
 
-        children: Array.from({ length: 16 }, () => ({
+        children: Array.from({ length: process.env.COLS }, () => ({
           extend: TableCell,
           props: (element, state) => ({
             border: '1px solid black',
