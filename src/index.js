@@ -2,26 +2,12 @@
 
 import { create, Flex } from 'smbls'
 
+import { Grid } from './grid'
 import designSystem from './designSystem'
 import * as components from './components'
 import pages from './pages'
 
-create({
-  extend: Flex,
-
-  props: {
-    theme: 'document',
-    flow: 'column',
-    height: '100vh',
-    align: 'center space-between'
-  },
-
-  Header: {},
-
-  content: {},
-
-  Footer: { text: 'Footer' }
-}, {
+create(Grid, {
   designSystem,
   components,
   pages
